@@ -1,98 +1,16 @@
-My gitlab hasn't been working properly from the terminal.
-
-I can commit to other's repositories in other projects, but can't get it
-to work for me.
-
-I have been using github instead. However it is private.
-
-Instead here is a copy of my git log from the terminal:
-
-commit 7ebd9141eb2d3264f8d8175a52dbe40794cd1c06
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Fri May 25 00:37:44 2018 +1000
-
-    Cleaning up unimportant files
-
-commit 6c7a107c103ed51773c63475d25d5450e241dff9
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Fri May 25 00:30:22 2018 +1000
-
-    Final commit
-
-commit 3def4328258f9f6dc7ef4fb7d839e8a054d0df3e
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Fri May 25 00:04:39 2018 +1000
-
-    Completely working, w/ all fn comments
-
-commit 193b5bca02f76e538a38fd98d6696b7f7471747c
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Thu May 24 22:53:38 2018 +1000
-
-    halfway through commenting
-
-commit f9560fc7e604952113b5daf97e11c5c78460fff5
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Thu May 24 22:24:36 2018 +1000
-
-    FINISHED
-
-commit a962e269dbf89bbaff3d08cdf252a59459df5ece
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Thu May 24 22:10:59 2018 +1000
-
-    all working except for dates
-
-commit 30944d49cb0499fbc9011169445663398e1c68d8
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Thu May 24 21:19:53 2018 +1000
-
-    hopefully all working
-
-commit 7ae6764bad26c11d43e45f277fafe31eaff164f1
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Thu May 24 20:53:27 2018 +1000
-
-    All working except for alternate names
-
-commit aff71d30dfe051765e07f5479287b237cfe6c04e
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Thu May 24 16:46:40 2018 +1000
-
-    Failed to parse wildcards
-
-commit 5857b8311a7afe3ca4b9f07903f5c2bc1bd4871d
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Thu May 24 15:32:58 2018 +1000
-
-    With working date comparison
-
-commit eed2bc9d0062ab76469515a67fd4ff7c18f2b99a
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Thu May 24 15:03:40 2018 +1000
-
-    Changing to inside the test folder
-
-commit c94daaac22ec889764d4dbd04e5610b5f8c071e1
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Thu May 24 14:22:45 2018 +1000
-
-    Have RSA key size analysis done
-
-commit 8e9c8d6e7f567ce6a1f662232dcfe18280d0aa1e
-Author: Christopher Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Wed May 23 20:45:58 2018 +1000
-
-    added parsing csvs, added comparing start/end dates (cmp not working). Added validateDomain (Only takes into account the CN), added print fns for better testing
-
-commit 831bfe1c8475dc7804196a254bd2909682a375b0
-Author: Chris Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Wed May 23 12:08:30 2018 +1000
-
-    Initial commit
-
-commit eefceb7ec66d45190b7270e7cd1e7c13b2650a98
-Author: Chris Chapman <chapmanc1@student.unimelb.edu.au>
-Date:   Wed May 23 08:05:09 2018 +1000
-
-    Initial commit
+A simple TLS Certificate checker, checking the validity of a given certificate.
+ *  Reads in a csv file specified by standard input, containing certificate file names
+ *  and the domain name to compare against.
+ *  Parses the certificates and validates the:
+ *      Common name and alternate names match the given url_name (url_name)
+ *      Key bit length
+ *      Whether the certificate's times are valid against the current time
+ *      Has valid extensions
+ *
+ *  Outputs a csv file named output.txt containing:
+ *  theCertificate,domainName,ValidityOfTicket\n
+ *
+ *  For each line in the input file
+ *  Includes base code provided in certexample by Chris Culnane
+ 
+ 
